@@ -42,9 +42,9 @@ test('creates views to state and assigns them as props', t => {
   const initial = {
     items: [],
     selected: -1
-  }
+  };
 
-  const store = U.atom(initial)
+  const store = U.atom(initial);
 
   const test1 = connect(template);
   const Test2 = test1(Component);
@@ -73,7 +73,7 @@ test('creates views to state that update', t => {
 
   const store = U.atom();
 
-  const connectWith = connect(template)
+  const connectWith = connect(template);
   const Reactive = connectWith(ReactiveComponent);
 
   const wrapper = mount(
