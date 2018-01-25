@@ -1,7 +1,7 @@
 import test from 'ava';
 import sinon from 'sinon';
 import * as React from 'karet';
-import K, * as U from 'karet.util';
+import * as U from 'karet.util';
 import * as R from 'ramda';
 import * as L from 'partial.lenses';
 import { mount } from 'enzyme';
@@ -19,6 +19,9 @@ test.beforeEach(t => {
     <div>
       <div className="x">
         {x}
+      </div>
+      <div className="xs">
+        {U.toString(xs)}
       </div>
     </div>;
 
@@ -68,7 +71,7 @@ test('creates views to state that update', t => {
   const { ReactiveComponent } = t.context;
   const template = {
     items: ['items', L.define([])],
-    selected: ['items', L.find(R.whereEq({ selected: true }))]
+    selected: ['items', L.find(R.whereEq({ selected: true }))],
   };
 
   const store = U.atom();
@@ -98,7 +101,7 @@ test('creates views to state that update', t => {
   const itemsToAdd = [
     { id: 1, selected: false, name: 'Snowball' },
     { id: 2, selected: true, name: 'Mr. Kale' },
-    { id: 3, selected: false, name: 'Mr. Nike' }
+    { id: 3, selected: false, name: 'Mr. Nike' },
   ];
 
   itemsToAdd.forEach(it => append.set(it));
