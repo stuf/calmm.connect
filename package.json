@@ -10,6 +10,7 @@
     "build:es": "NODE_ENV= BABEL_ENV=build rollup                -c -n calmm.connect -i lib/connect.js -f es  -o dist/connect.es.js",
     "build:umd": "NODE_ENV=dev BABEL_ENV=build rollup            -c -n calmm.connect -i lib/connect.js -f umd -o dist/connect.js",
     "build:umd.min": "NODE_ENV=production BABEL_ENV=build rollup -c -n calmm.connect -i lib/connect.js -f umd -o dist/connect.min.js",
+    "dev": "npm run build:es -- -w",
     "test": "NODE_ENV=test BABEL_ENV=ava ava",
     "test-with-coverage": "NODE_ENV=test BABEL_ENV=ava nyc ava",
     "lint": "eslint lib test",
