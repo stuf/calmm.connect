@@ -1,24 +1,36 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "indent": 0,
-        "linebreak-style": ["error", "unix"],
-        "quotes": ["error", "single"],
-        "semi": ["error", "always"],
-        "no-unused-vars": 0
-    }
+  "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "arrow-parens": 0,
+    "brace-style": [2, "stroustrup"],
+    "import/first": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "import/extensions": [0, { "css": "always" }],
+    "indent": 0,
+    "new-cap": 1,
+    "react/jsx-no-bind": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
+    "react/require-default-props": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "react/jsx-closing-bracket-location": [1, "after-props"],
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-wrap-multilines": 0,
+    "react/prefer-stateless-function": 1,
+    "react/no-typos": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/forbid-prop-types": 0,
+    "react/prop-types": 0,
+    // "no-use-before-define": 0,
+    "function-paren-newline": 0,
+    "object-curly-newline": 0,
+    "no-underscore-dangle": [1, { "allow": ["__"] }],
+    "no-unused-vars": 1,
+    "no-debugger": 1,
+    "spaced-comment": [2, "always", { "markers": ["/", "@", "#", "."], "exceptions": [".", "#"] }],
+  }
 };

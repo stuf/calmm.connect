@@ -2,6 +2,7 @@ import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
+import cjs from 'rollup-plugin-commonjs';
 
 export default {
   external: ['ramda', 'karet', 'karet.util', 'partial.lenses'],
@@ -20,6 +21,7 @@ export default {
     babel({
       exclude: 'node_modules/**'
     }),
+    cjs(),
     process.env.NODE_ENV === 'production' && uglify()
   ].filter(x => x)
 };

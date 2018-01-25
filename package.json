@@ -11,7 +11,7 @@
     "build:umd": "NODE_ENV=dev BABEL_ENV=build rollup            -c -n calmm.connect -i lib/connect.js -f umd -o dist/connect.js",
     "build:umd.min": "NODE_ENV=production BABEL_ENV=build rollup -c -n calmm.connect -i lib/connect.js -f umd -o dist/connect.min.js",
     "test": "NODE_ENV=test BABEL_ENV=ava ava",
-    "coverage": "NODE_ENV=test BABEL_ENV=ava nyc ava",
+    "test-with-coverage": "NODE_ENV=test BABEL_ENV=ava nyc ava",
     "lint": "eslint lib test",
     "prepare": "npm-run-all lint build test"
   },
@@ -39,6 +39,10 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
     "npm-run-all": "^4.1.2",
     "nyc": "^11.4.1",
@@ -51,10 +55,12 @@
     "sinon": "^4.2.1"
   },
   "dependencies": {
+    "debug": "^3.1.0",
     "karet": "^2.0.0",
     "karet.util": "^0.17.2",
     "kefir": "^3.8.1",
     "partial.lenses": "^13.1.1",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }

@@ -41,7 +41,7 @@ test('creates views to state and assigns them as props', t => {
 
   const initial = {
     items: [],
-    selected: -1
+    selected: -1,
   };
 
   const store = U.atom(initial);
@@ -78,8 +78,8 @@ test('creates views to state that update', t => {
 
   const wrapper = mount(
     <Provider store={store}>
-      <Reactive shouldBeVisible={true} />
-    </Provider>
+      <Reactive shouldBeVisible />
+    </Provider>,
   );
 
   const component = wrapper.find(ReactiveComponent);
